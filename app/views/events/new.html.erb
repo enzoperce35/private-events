@@ -1,0 +1,15 @@
+<%= form_for :events, url: events_path, method: 'post' do |f| %>
+  <p>
+    <%= f.label 'event' %>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label 'date' %>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

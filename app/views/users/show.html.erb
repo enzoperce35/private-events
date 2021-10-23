@@ -1,3 +1,8 @@
-<% @user_events.each do |event| %>
-  <%= event.date %>
+<!-- this show page shows that association custom set up is working properly -->
+
+<% @events.each do |event| %>
+  <%= event.creator_id %>
+  <%= event.creator %>
+  <%= event.name %>
+  <%= event.date %><br>
 <% end %>
