@@ -1,3 +1,9 @@
 <%= link_to 'Sign-in', new_user_session_path, method: 'get' %>
 
-<%= link_to 'Create_event', new_event_path, method: 'get' %>
+<%= link_to 'Create_event', new_event_path, method: 'get' %><br>
+
+<hr>
+
+<% @events.each do |event| %>
+  <%= event.name %><br>
+<% end %>
