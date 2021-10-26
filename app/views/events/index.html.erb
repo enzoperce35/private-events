@@ -5,5 +5,6 @@
 <hr>
 
 <% @events.each do |event| %>
-  <%= event.name %><br>
+  <%= link_to event.name, event_path(event), method: 'get' %>
+  <%= link_to 'attend?', attendee_path(event), method: 'post' %><br>
 <% end %>

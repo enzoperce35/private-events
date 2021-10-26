@@ -1,8 +1,29 @@
 <!-- this show page shows that association custom set up is working properly -->
 
+<h4>all_events</h4>
 <% @events.each do |event| %>
   <%= event.creator_id %>
-  <%= event.creator %>
+  <%= event.creator.email %>
   <%= event.name %>
   <%= event.date %><br>
 <% end %>
+
+<hr>
+
+<div>
+  <div>
+    <h4>my attended_events</h4>
+    <% @past_events.each do |past| %>
+      <%= past.name %>
+      <%= past.date %><br>
+    <% end %>
+  </div>
+
+  <div>
+    <h4>my to be attended future events</h4>
+    <% @future_events.each do |future| %>
+      <%= future.name %>
+      <%= future.date %><br>
+    <% end %>
+  </div>
+</div>

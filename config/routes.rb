@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'users/show', to: 'users#show'
+  post 'event_attendances/add_attendee/:id', to: 'event_attendances#add_attendee', as: 'attendee'
   
-  resources :events, only: [:new, :create]
+  resources :events, only: [:new, :create, :show]
 end
