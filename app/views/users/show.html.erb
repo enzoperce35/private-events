@@ -13,7 +13,7 @@
 <div>
   <div>
     <h4>my attended_events</h4>
-    <% @past_events.each do |past| %>
+    <% current_user.attended_events.past.each do |past| %>
       <%= past.name %>
       <%= past.date %><br>
     <% end %>
@@ -21,9 +21,9 @@
 
   <div>
     <h4>my to be attended future events</h4>
-    <% @future_events.each do |future| %>
-      <%= future.name %>
-      <%= future.date %><br>
+    <% current_user.attended_events.upcoming.each do |up| %>
+      <%= up.name %>
+      <%= up.date %><br>
     <% end %>
   </div>
 </div>

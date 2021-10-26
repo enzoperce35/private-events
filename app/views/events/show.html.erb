@@ -1,3 +1,4 @@
+<h4>Event Attendees</h4>
 <% @event.attendees.each do |attendee| %>
-  <%= link_to attendee.email, users_show_path, method: 'get' %>
+  <%= attendee.email%>
 <% end %>
